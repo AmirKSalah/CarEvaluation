@@ -1,5 +1,17 @@
 import streamlit as st
+import pandas as pd
 
+
+
+df = pd.DataFrame(
+    [
+        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Results and Discussion"},
+        {"Member Name": "Amir Salah", "Proposal Contribution": "Github & Streamlit"},
+        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Video"},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": "Intro/Background"},
+        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Methods"},
+    ]
+)
 st.title("Car Evaluation")
 st.write("""
 Amir Salah, Myles Ezeanii, Dennis Hantman, Caleb Asress, Alexandre Chaker \n
@@ -45,10 +57,13 @@ For our project, our goal is to create a model which can accurately determine th
 """)
 st.header("Video Presentation:\n")
 st.write("""
-https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n
+https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n""")
+st.header("Contribution Table:")
+st.dataframe(df, use_container_width=True)
 
-
-Works Cited
+st.header("Works Cited")
+st.write("""
 S. Singh, S. Das, A. Sajwan, I. Singh, and A. Alok, “Car Recommendation System Using Customer Reviews,” *International Research Journal of Engineering and Technology (IRJET)*, vol. 9, no. 10, pp. 983–989, Oct. 2022
 """
 )
+
