@@ -60,6 +60,8 @@ st.write("""
 https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n""")
 st.header("Contribution Table:")
 st.dataframe(df, use_container_width=True)
+st.header("Gantt Chart:")
+st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
 
 st.header("Works Cited")
 st.write("""
