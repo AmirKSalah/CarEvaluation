@@ -5,11 +5,11 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Results and Discussion"},
-        {"Member Name": "Amir Salah", "Proposal Contribution": "Github & Streamlit"},
-        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Video"},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": "Intro/Background"},
-        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Methods"},
+        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation"},
+        {"Member Name": "Amir Salah", "Proposal Contribution": "Streamlit & Methods"},
+        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Intro/Background"},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": "Results/Discussion"},
+        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
     ]
 )
 st.title("Car Evaluation")
@@ -32,14 +32,11 @@ We took many preprocessing steps before analyzing the data. First, we split the 
 Finally, we fit the preprocessor on the training data.\n
 Now that the data is preprocessed, we start supervised learning on the data. Our model consists of an input layer with 6 features, a hidden layer with 64 units and ReLU activation, and an output layer with 4 units and softmax activation. Then, we fit a LabelEncoder on the target variable and transform it. This allows our model to numerically recognize our variables. Finally, we train our model on the variable using 10 epochs and a batch size of 32.
 \n
-Scikit-learn:\n
+Scikit-learn Tools Used:\n
 • OneHotEncoder() or LabelEncoder() for encoding.\n
 • train_test_split() to split data.\n
-• DecisionTreeClassifier() for decision trees.\n
-• RandomForestClassifier() for random forest.\n
-• SVC() to support vector machines.\n
-• K Means() for clustering.\n
-• StandardScaler() to scale.\n
+• SimpleImputer for missing value replacement.\n
+• ColumnTransformer() for column preprocessing.\n
          """)
 
 st.header("(Potential) Results and Discussion:\n")
@@ -53,7 +50,7 @@ For our project, our goal is to create a model which can accurately determine th
 st.header("Video Presentation:\n")
 st.write("""
 https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n""")
-st.header("Contribution Table:")
+st.header("Midterm Contribution Table:")
 st.dataframe(df, use_container_width=True)
 st.header("Gantt Chart:")
 st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
