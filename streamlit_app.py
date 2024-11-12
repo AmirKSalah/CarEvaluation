@@ -21,8 +21,8 @@ CS4641/CS7641\n
 """)
 st.header("Introduction/Background")
 st.write("""
-Deciding on what car to buy can be a tough decision, especially for people who don’t know a lot about them. We wanted to create something that would help people in this situation who may not have access to a ton of resources to help make the right decision for them. Thus, our group decided on making a car recommendation system that recommends vehicles based on their features. In one study regarding a similar idea, Singh et al. proposed a car recommendation system that utilized NLP and machine learning techniques to analyze both user reviews and user preference to ultimately recommend a car or not. Our project aims for something similar with more of a focus on the features of the car.\n
-Our dataset contains information on price, size, safety, tech, and more features for over 1000 different cars. We thought this would be a good dataset to start off with as there are multiple features we can use to judge the car on.\n
+Many people may not have resources available that could help them when purchasing a new car. To help such people, our group decided to make a car recommendation system that could help users pick a car based on desired features. In one study we found regarding a similar idea, Singh et al. proposed a car recommendation system that utilized different machine learning techniques to analyze both user reviews and user preferences to ultimately recommend a car or not. In our project, we aim to develop a similar system with more of a focus on the features of the car, utilizing supervised learning methods to make recommendations.\n
+The dataset we found contains information on price, size, safety, technology, and more for over 1000 different cars. Since there is a large variety of features we can use to recommend cars, we thought this would be a good dataset to use. Applying supervised learning strategies to this dataset ultimately allows us to give accurate recommendations based on users’ desired features.\n
 Dataset Link:  https://archive.ics.uci.edu/dataset/19/car+evaluation\n
          """)
 st.header("Methods")
@@ -55,9 +55,6 @@ Additionally, we will use a confusion matrix to break our results down to true a
 Finally, we will use Receiver Operating Characteristic - Area Under the Curve (ROC-AUC) to see if the dataset is imbalanced. Our ROC-AUC will be equal to the area under the curve plotting the True Positive Rate.\n
 For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
 """)
-st.header("Video Presentation:\n")
-st.write("""
-https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n""")
 st.header("Contribution Table:")
 st.dataframe(df, use_container_width=True)
 st.header("Gantt Chart:")
