@@ -56,9 +56,7 @@ Additionally, we will use a confusion matrix to break our results down to true a
 Finally, we will use Receiver Operating Characteristic - Area Under the Curve (ROC-AUC) to see if the dataset is imbalanced. Our ROC-AUC will be equal to the area under the curve plotting the True Positive Rate.\n
 For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
 """)
-st.header("Video Presentation:\n")
-st.write("""
-https://youtu.be/YUN-Sh4Gahs?si=C9UTUkMHF5Deerqu\n""")
+
 st.header("Midterm Contribution Table:")
 st.dataframe(df, use_container_width=True)
 st.header("Gantt Chart:")
