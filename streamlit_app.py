@@ -7,9 +7,9 @@ df = pd.DataFrame(
     [
         {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Results and Discussion"},
         {"Member Name": "Amir Salah", "Proposal Contribution": "Github & Streamlit"},
-        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Video"},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": "Intro/Background"},
-        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Methods"},
+        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Introduction/Background"},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": "Results and Discussion"},
+        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
     ]
 )
 st.title("Car Evaluation")
