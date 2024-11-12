@@ -27,16 +27,11 @@ Dataset Link:  https://archive.ics.uci.edu/dataset/19/car+evaluation\n
          """)
 st.header("Methods")
 st.write("""
-Data Preprocessing:
-• One-Hot or Label Encoding to convert category variables to numerical values.\n
-• Manage missing values, even if the dataset appears complete.\n
-• Scaling features for algorithms that require them, such as Support Vector Machine (SVM) and k-Nearest Neighbors (k-NN).\n
-• A train-test split to divide data for model evaluation.\n
-Machine Learning Algorithms:\n
-• Supervised learning:\n
-• Decision Trees for categorical data and straightforward to interpret.\n
-• Random Forest to enhance accuracy by minimizing overfitting.\n
-• Support Vector Machines (SVM) for classification jobs and to handle high-dimensional data.\n
+To reach our goal of a machine learning solution that can help consumers decide on cars, we implemented a neural network model based on the Car Evaluation data set. The features included in this data set are buying price, maintenance price, number of doors, seating capacity, luggage boot size, and estimated car safety.
+We took many preprocessing steps before analyzing the data. First, we split the dataset into training and test sets. We do this in order to gauge how well the model is learning the training data as it goes along. Then, we use mean imputation to replace any missing data points in our set with the mean. This allows us to have a more complete set to work with, and increases our model accuracy. Then, we separate the categorical features, such as car safety, from the numerical features, such as number of doors. We then create transformers for our categories, using the mean of values for our numerical features and One-Hot encoding on our categorical features.
+Finally, we fit the preprocessor on the training data.
+Now that the data is preprocessed, we start supervised learning on the data. Our model consists of an input layer with 6 features, a hidden layer with 64 units and ReLU activation, and an output layer with 4 units and softmax activation. Then, we fit a LabelEncoder on the target variable and transform it. This allows our model to numerically recognize our variables. Finally, we train our model on the variable using 10 epochs and a batch size of 32.
+\n
 Scikit-learn:\n
 • OneHotEncoder() or LabelEncoder() for encoding.\n
 • train_test_split() to split data.\n
