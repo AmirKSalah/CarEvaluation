@@ -54,6 +54,7 @@ To test for our results, we prepared our target variable for testing and evaluat
          
 """)
 st.image("confusion_matrix.png")
+st.image("training_accuracy.png")
 
 st.header("Midterm Contribution Table:")
 st.dataframe(df, use_container_width=True)
