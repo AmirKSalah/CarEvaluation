@@ -5,7 +5,7 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation"},
+        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation, Results and Discussion"},
         {"Member Name": "Amir Salah", "Proposal Contribution": "Streamlit & Methods"},
         {"Member Name": "Dennis Hantman", "Proposal Contribution": "Intro/Background"},
         {"Member Name": "Caleb Asress", "Proposal Contribution": "Did Not Participate"},
