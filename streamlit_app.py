@@ -8,7 +8,7 @@ df = pd.DataFrame(
         {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation"},
         {"Member Name": "Amir Salah", "Proposal Contribution": "Streamlit & Methods"},
         {"Member Name": "Dennis Hantman", "Proposal Contribution": "Intro/Background"},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": "Results/Discussion"},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": "Did Not Participate"},
         {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
     ]
 )
