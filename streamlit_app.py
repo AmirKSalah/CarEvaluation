@@ -50,12 +50,10 @@ Scikit-learn Tools Used:\n
 
 st.header("Results and Discussion:\n")
 st.write("""
-For our project, we will be using four separate quantitative metrics to determine the efficiency of the model. To start, we will use accuracy to help us find its overall correctness. Because it measures the proportion of cars correctly classified as either acceptable or unacceptable, the accuracy will be equal to ​ (True Positives + True Negatives)/(Total Number of Predictors).  Using this, we expect to get a good sense of how many correct predictions are given across our dataset.\n
-Additionally, we will use a confusion matrix to break our results down to true and false positives/negatives. This will allow us to see where our model is making mistakes and determine if these false positives / negatives are costly to our model. Thirdly, we intend to use precision and recall to further determine the consequences and how significant they are. For precision, which checks how many cars predicted as acceptable are actually acceptable, our formula will be  (True Positives) / (True Positives + True Negatives). For recall (sensitivity) which measures how many of the actual acceptable cars were correctly classified, our formula will be  (True Positives)/(True Positives + False Negatives). To find the harmonic mean between the two, we will find the F1-score given in the form of 
-2*(Precision*Recall)/(Precision + Recall). This is useful for finding a balance between precision and recall and can help us if we start seeing imbalances in the class prediction. \n
-Finally, we will use Receiver Operating Characteristic - Area Under the Curve (ROC-AUC) to see if the dataset is imbalanced. Our ROC-AUC will be equal to the area under the curve plotting the True Positive Rate.\n
-For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
+To test for our results, we prepared our target variable for testing and evaluated the performance of our trained neural network model using said data. As a result, we found our test loss to be approximately 0.121 and our test accuracy to be approximately 0.957. Because of our relatively low test loss as well as our relatively high test accuracy, we can conclude that our model performed well and is able to generalize from our training data to unseen data in our testing set. Additionally, we gathered both a confusion matrix and an accuracy and loss curve to better illustrate the process: \n
+         
 """)
+st.image("confusion_matrix.png")
 
 st.header("Midterm Contribution Table:")
 st.dataframe(df, use_container_width=True)
