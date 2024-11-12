@@ -5,10 +5,10 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Results and Discussion"},
-        {"Member Name": "Amir Salah", "Proposal Contribution": "Github & Streamlit"},
-        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Introduction/Background"},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": "Results and Discussion"},
+        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation"},
+        {"Member Name": "Amir Salah", "Proposal Contribution": "Streamlit & Methods"},
+        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Intro/Background"},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": "Results/Discussion"},
         {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
     ]
 )
@@ -17,7 +17,7 @@ st.write("""
 Amir Salah, Myles Ezeanii, Dennis Hantman, Caleb Asress, Alexandre Chaker \n
 Max Mahdi Roozbahani \n
 CS4641/CS7641\n
-04 October 2024\n
+11 November 2024\n
 """)
 st.header("Introduction/Background")
 st.write("""
@@ -25,29 +25,30 @@ Many people may not have resources available that could help them when purchasin
 The dataset we found contains information on price, size, safety, technology, and more for over 1000 different cars. Since there is a large variety of features we can use to recommend cars, we thought this would be a good dataset to use. Applying supervised learning strategies to this dataset ultimately allows us to give accurate recommendations based on users’ desired features.\n
 Dataset Link:  https://archive.ics.uci.edu/dataset/19/car+evaluation\n
          """)
+st.header("Problem Definition")
+st.write("""
+The process of selecting the proper car can be difficult, particularly for people who lack considerable automotive knowledge or access to adequate resources. Our project tries to solve this problem by creating an automobile recommendation system using machine learning techniques. The major goal is to develop a model capable of categorizing cars as "unacceptable," "acceptable," "good," and "very good" based on their qualities. This will allow consumers to make informed selections based on their preferences and needs.\n
+This project’s dataset consists of a variety of car parameters from the UCI Car Evaluation dataset, including the purchase price, maintenance cost, number of doors, seating capacity, luggage boot size, and safety ratings. The dataset is well-suited to this task since it includes a wide variety of features that can influence car acceptability. By emphasizing these characteristics, our project aims to create an effective tool that streamlines the car purchasing process for prospective purchasers.\n
+To achieve this, we used supervised learning models, which are intended to examine and forecast the acceptability of a car based on the attributes presented. The models were chosen because they are good at handling categorical and numerical data, resulting in robust and dependable suggestions.\n
+
+
+""")
+
 st.header("Methods")
 st.write("""
-Data Preprocessing:
-• One-Hot or Label Encoding to convert category variables to numerical values.\n
-• Manage missing values, even if the dataset appears complete.\n
-• Scaling features for algorithms that require them, such as Support Vector Machine (SVM) and k-Nearest Neighbors (k-NN).\n
-• A train-test split to divide data for model evaluation.\n
-Machine Learning Algorithms:\n
-• Supervised learning:\n
-• Decision Trees for categorical data and straightforward to interpret.\n
-• Random Forest to enhance accuracy by minimizing overfitting.\n
-• Support Vector Machines (SVM) for classification jobs and to handle high-dimensional data.\n
-Scikit-learn:\n
+To reach our goal of a machine learning solution that can help consumers decide on cars, we implemented a neural network model based on the Car Evaluation data set. The features included in this data set are buying price, maintenance price, number of doors, seating capacity, luggage boot size, and estimated car safety.\n
+We took many preprocessing steps before analyzing the data. First, we split the dataset into training and test sets. We do this in order to gauge how well the model is learning the training data as it goes along. Then, we use mean imputation to replace any missing data points in our set with the mean. This allows us to have a more complete set to work with, and increases our model accuracy. Then, we separate the categorical features, such as car safety, from the numerical features, such as number of doors. We then create transformers for our categories, using the mean of values for our numerical features and One-Hot encoding on our categorical features.
+Finally, we fit the preprocessor on the training data.\n
+Now that the data is preprocessed, we start supervised learning on the data. Our model consists of an input layer with 6 features, a hidden layer with 64 units and ReLU activation, and an output layer with 4 units and softmax activation. Then, we fit a LabelEncoder on the target variable and transform it. This allows our model to numerically recognize our variables. Finally, we train our model on the variable using 10 epochs and a batch size of 32.
+\n
+Scikit-learn Tools Used:\n
 • OneHotEncoder() or LabelEncoder() for encoding.\n
 • train_test_split() to split data.\n
-• DecisionTreeClassifier() for decision trees.\n
-• RandomForestClassifier() for random forest.\n
-• SVC() to support vector machines.\n
-• K Means() for clustering.\n
-• StandardScaler() to scale.\n
+• SimpleImputer for missing value replacement.\n
+• ColumnTransformer() for column preprocessing.\n
          """)
 
-st.header("(Potential) Results and Discussion:\n")
+st.header("Results and Discussion:\n")
 st.write("""
 For our project, we will be using four separate quantitative metrics to determine the efficiency of the model. To start, we will use accuracy to help us find its overall correctness. Because it measures the proportion of cars correctly classified as either acceptable or unacceptable, the accuracy will be equal to ​ (True Positives + True Negatives)/(Total Number of Predictors).  Using this, we expect to get a good sense of how many correct predictions are given across our dataset.\n
 Additionally, we will use a confusion matrix to break our results down to true and false positives/negatives. This will allow us to see where our model is making mistakes and determine if these false positives / negatives are costly to our model. Thirdly, we intend to use precision and recall to further determine the consequences and how significant they are. For precision, which checks how many cars predicted as acceptable are actually acceptable, our formula will be  (True Positives) / (True Positives + True Negatives). For recall (sensitivity) which measures how many of the actual acceptable cars were correctly classified, our formula will be  (True Positives)/(True Positives + False Negatives). To find the harmonic mean between the two, we will find the F1-score given in the form of 
@@ -55,7 +56,8 @@ Additionally, we will use a confusion matrix to break our results down to true a
 Finally, we will use Receiver Operating Characteristic - Area Under the Curve (ROC-AUC) to see if the dataset is imbalanced. Our ROC-AUC will be equal to the area under the curve plotting the True Positive Rate.\n
 For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
 """)
-st.header("Contribution Table:")
+
+st.header("Midterm Contribution Table:")
 st.dataframe(df, use_container_width=True)
 st.header("Gantt Chart:")
 st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
