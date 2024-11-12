@@ -17,7 +17,7 @@ st.write("""
 Amir Salah, Myles Ezeanii, Dennis Hantman, Caleb Asress, Alexandre Chaker \n
 Max Mahdi Roozbahani \n
 CS4641/CS7641\n
-04 October 2024\n
+11 November 2024\n
 """)
 st.header("Introduction/Background")
 st.write("""
