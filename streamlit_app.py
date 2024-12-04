@@ -5,11 +5,11 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-        {"Member Name": "Myles Ezeanii", "Proposal Contribution": "Model/Notebook Creation, Results and Discussion"},
-        {"Member Name": "Amir Salah", "Proposal Contribution": "Streamlit & Methods"},
-        {"Member Name": "Dennis Hantman", "Proposal Contribution": "Intro/Background"},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": "Did Not Participate"},
-        {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
+        {"Member Name": "Myles Ezeanii", "Proposal Contribution": ""},
+        {"Member Name": "Amir Salah", "Proposal Contribution": ""},
+        {"Member Name": "Dennis Hantman", "Proposal Contribution": ""},
+        {"Member Name": "Caleb Asress", "Proposal Contribution": ""},
+        {"Member Name": "Alexandre Chaker", "Proposal Contribution": ""},
     ]
 )
 st.title("Car Evaluation")
@@ -59,10 +59,12 @@ Finally, we will use Receiver Operating Characteristic - Area Under the Curve (R
 For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
                   
 """)
+st.markdown("**Neural Network Confusion Matrix (0 - acc, 1 - good, 2 - unacc, 3 - vgood):**")
 st.image("confusion_matrix.png")
 st.image("XGBoost_Confusion.png")
 st.image("KNNConfusion.png")
 st.write("Looking at our confusion matrices, we see generally similar results. There is a heavy bias towards “unacceptable” and “acceptable” predictions, however, this is likely due to a bias in the training data itself. Otherwise, the Neural Network and the XGBoost models had very similar results, while KNN had slightly less true positives for “acceptable” classifications. This may suggest that our KNN model performed worse than the other two models tested. However, test result metrics can give us a better understanding of how the models performed. \n")
+
 st.image("ModelComparison.png")
 st.write("Above are the test results of each model used in our project rounded to two decimals. We first see that our Neural Network performed extremely well. With an accuracy of 0.98, almost all of our neural network’s predictions were correct. This means our neural network performed well in identifying both true positives and true negatives. Furthermore, with a precision of 0.99, almost all predicted positives were true positives, hence our model rarely makes false positive predictions. This is an important metric for our project as falsely recommending cars could cost users large amounts. A recall of 0.98 and ROC-AUC of 1.00  also suggests our neural network model was successful in correctly classifying cars and distinguishing between classes. Finally, a loss of 0.05 indicates that the neural network’s predictions were close to the true values. Hence, our neural network performed very well and would be an excellent choice for our product. \n")
 st.write("Our XGBoost model performed similarly to our neural network in most metrics. The only significant difference was that the XGBoost had a slightly lower precision. This means that our XGBoost model made slightly more false positive predictions than our neural network. In the context of our project, high precision is an important metric. While XGBoost can often perform much faster than a neural network, ensuring that our users are not presented with incorrect recommendations is of high priority. Hence a neural network may still be a better option.\n")
