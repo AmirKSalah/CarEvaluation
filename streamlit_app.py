@@ -11,7 +11,7 @@ df = pd.DataFrame(
         {"Member Name": "Caleb Asress", "Proposal Contribution": "Did Not Participate"},
         {"Member Name": "Alexandre Chaker", "Proposal Contribution": "Problem Definition"},
     ]
-).reset_index(drop=True)
+)
 st.title("Car Evaluation")
 st.write("""
 Amir Salah, Myles Ezeanii, Dennis Hantman, Caleb Asress, Alexandre Chaker \n
@@ -67,7 +67,8 @@ st.write("As seen from both charts, the addition of 8 epochs provided a strong i
 st.write("For the future, we wish to use similar strategies to create an Extreme Gradient Boosting model and a Support Vector Machine to see the differences in speed and accuracy.\n")
 st.header("Midterm Contribution Table:")
 
-st.table(df)
+html_table = df.to_html(index=False, escape=False)
+st.markdown(html_table, unsafe_allow_html=True)
 
 st.header("Gantt Chart:")
 st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
