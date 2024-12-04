@@ -19,6 +19,7 @@ Max Mahdi Roozbahani \n
 CS4641/CS7641\n
 03 December 2024\n
 """)
+st.write("Video Presentation: https://youtu.be/i2p604IebHs?feature=shared")
 st.header("Introduction")
 st.write("""
 It’s undeniable that cars are a central part of American culture. Over ninety percent of American households own at least one vehicle, and over seventy percent of commuters rely on cars for transportation. Because of this, the choice of what car to purchase is an extremely important one, and has a significant impact on the owner’s lifestyle. This decision is especially crucial for those who may not have access to resources or individuals who can help them make the best choice. Thus, our group decided to make a car evaluation system that recommends vehicles based on their features. In one study regarding a similar concept, Singh et al. proposed a car recommendation system that utilized NLP and machine learning techniques to analyze both user reviews and user preference to ultimately recommend a car or not. Bauer et. al. have also analyzed car data with a specific focus on the used market, and Mou et. al. have used machine learning to help customer decision making by using machine learning algorithms such as SVM and random forest. Our project has a similar target with more of a focus on the features of the car, and stands out with our unique use of models, including a neural network.
@@ -72,8 +73,6 @@ st.write("Our XGBoost model performed similarly to our neural network in most me
 st.write("Our KNN model performed the worst, suffering in all metrics compared to our other models. One metric that may have had a large impact in our KNN model is the loss of 0.76. This is a relatively high loss, especially compared to neural network’s 0.05 and XGBoost’s 0.11. One main reason behind the loss is that the KNN model likely suffered from a high-dimensionality dataset. Each car in the dataset has several different features, resulting in a high dimensionality. This means that the distances KNN measures become very similar and it then struggles to distinguish between classes. One way to improve this model would be to implement some form of dimensionality reduction like PCA. Overall though, KNN did not perform well and should be avoided in our product.\n")
 st.write("Ultimately, based on the results discussed above, if our dataset is not too big and speed is not of importance, then the Neural Network model is the best choice for our project. It excels in all metrics, providing our users with accurate and precise car recommendations. If speed is of importance, then XGBoost is a solid choice given that its results are similar to those of the neural network other than precision. KNN did not perform well compared to the other models and therefore is best to be avoided. \n")
 
-st.header("Video Presentation:")
-st.write("https://youtu.be/i2p604IebHs?feature=shared")
 
 st.header("Final Contribution Table:")
 st.table(df)
