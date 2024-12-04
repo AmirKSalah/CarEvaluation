@@ -5,11 +5,11 @@ import pandas as pd
 
 df = pd.DataFrame(
     [
-        {"Member Name": "Myles Ezeanii", "Proposal Contribution": ""},
-        {"Member Name": "Amir Salah", "Proposal Contribution": ""},
-        {"Member Name": "Dennis Hantman", "Proposal Contribution": ""},
-        {"Member Name": "Caleb Asress", "Proposal Contribution": ""},
-        {"Member Name": "Alexandre Chaker", "Proposal Contribution": ""},
+        {"Member Name": "Myles Ezeanii", "Final Contribution": ""},
+        {"Member Name": "Amir Salah", "Final Contribution": ""},
+        {"Member Name": "Dennis Hantman", "Final Contribution": ""},
+        {"Member Name": "Caleb Asress", "Final Contribution": ""},
+        {"Member Name": "Alexandre Chaker", "Final Contribution": ""},
     ]
 )
 st.title("Car Evaluation")
@@ -59,6 +59,12 @@ Finally, we will use Receiver Operating Characteristic - Area Under the Curve (R
 For our project, our goal is to create a model which can accurately determine the acceptability of a car based on the standards we provide. This will allow for users to decide accurately whether or not the cars they intend to use are adequate and we expect the results to provide us just that.\n
                   
 """)
+
+st.markdown("**Neural Network: **")
+st.image("NNTraining.png")
+st.image("XGBLogLoss.png")
+st.write("Graph not provided for KNN as it does not use epochs.\n")
+st.write("Looking at the graphs above, we see that the addition of 8 epochs significantly improved the performance of our neural network. Two hidden layers with ReLU activation functions, a large dataset, and preprocessing steps such as imputation and one-hot encoding likely improved performance as well. Looking at our XGBoost graph, we see that the log loss function begins to plateau around 70 epochs. Hence, the addition of 80 epochs in our XGBoost model significantly aided in decreasing the total log loss.\n")
 st.markdown("**Neural Network Confusion Matrix (0 - acc, 1 - good, 2 - unacc, 3 - vgood):**")
 st.image("confusion_matrix.png")
 st.image("XGBoost_Confusion.png")
