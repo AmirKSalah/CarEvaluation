@@ -73,7 +73,7 @@ st.write("Our KNN model performed the worst, suffering in all metrics compared t
 st.write("Ultimately, based on the results discussed above, if our dataset is not too big and speed is not of importance, then the Neural Network model is the best choice for our project. It excels in all metrics, providing our users with accurate and precise car recommendations. If speed is of importance, then XGBoost is a solid choice given that its results are similar to those of the neural network other than precision. KNN did not perform well compared to the other models and therefore is best to be avoided. \n")
 st.header("Final Contribution Table:")
 
-st.dataframe(df)
+st.table(df)
 
 st.header("Gantt Chart:")
 st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
