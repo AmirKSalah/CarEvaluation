@@ -66,7 +66,9 @@ st.image("training_accuracy.png")
 st.write("As seen from both charts, the addition of 8 epochs provided a strong influence on the effectiveness of the model. Other factors which lead to these accurate results include the addition of two hidden layers with ReLU activation functions inside of them, a sufficient amount of data for the neural network to work with (1728 different cars), and the preprocessing steps of imputation and one-hot encoding which were able to effectively handle missing values and categorical data accordingly. \n")
 st.write("For the future, we wish to use similar strategies to create an Extreme Gradient Boosting model and a Support Vector Machine to see the differences in speed and accuracy.\n")
 st.header("Midterm Contribution Table:")
-st.dataframe(df, use_container_width=True)
+
+st.table(df)
+
 st.header("Gantt Chart:")
 st.write("https://docs.google.com/spreadsheets/d/1gD6TI02N_67U_YAIVeduaDORvfWMKicr/edit?gid=2146609855#gid=2146609855\n")
 
